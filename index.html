@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hadiah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+    p {
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .container {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    input {
+      display: block;
+      width: 250px;
+      padding: 10px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn {
+      background-color: #4dbde6;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #3aaacc;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HADIAH</h1>
+  <p>Dari Fathur Rizam</p>
+  
+  <div class="container">
+    <input type="text" id="resi" placeholder="Nomor Resi">
+    <input type="password" id="password" placeholder="Kata Sandi">
+    <button class="btn" onclick="cekData()">CEK</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    function cekData() {
+      var resi = document.getElementById("resi").value;
+      var password = document.getElementById("password").value;
+      var errorMsg = document.getElementById("errorMsg");
+
+      if (resi === "08032008" && password === "fathurrizam") {
+        window.location.href = "https://wa.me/qr/KMND5BT3GBXZF1";
+      } else {
+        errorMsg.textContent = "Nomor Resi atau Kata Sandi salah!";
+      }
+    }
+  </script>
+</body>
+</html>
